@@ -3,7 +3,7 @@ import tweepy
 import json
 
 #SCHEDULE
-schedule = json.load(open("./data/schedule.json", "r"))
+schedule = json.load(open("./schedule.json", "r"))
 games_left = [g for g in schedule if "win_loss_result" not in g]
 
 #CHAPMAN SEASON STATS
