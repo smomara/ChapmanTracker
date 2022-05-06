@@ -22,6 +22,7 @@ if statsapi.boxscore_data(game_id)['homeBatters'][0]['namefield'] == 'Blue Jays 
 elif statsapi.boxscore_data(game_id)['awayBatters'][0]['namefield'] == 'Blue Jays Batters':
 	batters = 'awayBatters'
 
+#FIND INDEX
 for i in range(len(statsapi.boxscore_data(game_id)[batters])):
 	if statsapi.boxscore_data(game_id)[batters][i]['name'] == 'Chapman, M':
 		index = i
@@ -69,11 +70,11 @@ Season Stats:
 {len(games_left)} games left"""
 
 #TWITTER VERIFICATION
-auth = tweepy.OAuthHandler("699ae9YxTbE95szXmqLgslYug", #consumer key
-                           "yhJgnWVeUUhZybwTlTVC07crnJF7fHzEka3Yq2AXozrhlASLzu") #consumer key secret
+auth = tweepy.OAuthHandler(CONSUMER_KEY,
+                           CONSUMER_KEY_SECRET)
 
-auth.set_access_token("1522253892083404806-EwHFfwvAvTY9d1fneFd2RsRpltvW6G", #access token key
-                       "0Pgo2IAO31q9gKteaoz60qjvfEOWvQDjFzjCCcN852uIy") #access token key secret
+auth.set_access_token(ACCESS_TOKEN_KEY,
+                      ACCESS_TOKEN_KEY_SECRET)
 
 api = tweepy.API(auth)
 
