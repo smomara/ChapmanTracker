@@ -38,7 +38,7 @@ def schedule():
         row_list.append(d)
 
     # Write it out
-    with open("./data/schedule.json", "w") as fp:
+    with open("./schedule.json", "w") as fp:
         json.dump(row_list, fp, indent=2, sort_keys=True, default=str)
 
 schedule()
